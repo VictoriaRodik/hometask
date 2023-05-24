@@ -39,7 +39,8 @@ numbers(1, 3);
 function randArray(k) {
   let arr = [];
   for (i = 0; i < k; i++) {
-    arr.push(Math.floor(Math.random() * (499)) + 1);
+    let item = Math.floor(Math.random() * (499)) + 1;
+    arr.push(item);
   }
   return arr;
 }
@@ -61,31 +62,33 @@ function arrNew(arr) {
       arrStr.push(arr[i]);
     }
   }
-  return new Array(arrNumbers, arrStr);
+  return [arrNumbers, arrStr];
 }
 console.log(arrNew([5, "Limit", 12, "a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"]));
 
 //Task8
-function hello() {
-  let now = new Date();
-  let currentHour = now.getHours();
+function greeting() {
+  const now = new Date();
+  const currentHour = now.getHours();
+  const greetings = ["Доброї ночі", "Доброго ранку", "Доброго дня", "Доброго вечора"]
   if (currentHour >= 23 && currentHour < 5) {
-    console.log("Доброї ночі");
-  } else if (currentHour >= 5 && currentHour < 11) {
-    console.log("Доброго ранку");
-  } else if (currentHour >= 11 && currentHour < 17) {
-    console.log("Доброго дня");
-  } else {
-    console.log("Доброго вечора");
+    console.log(greetings[0]);
+  } else if (currentHour >= 5) {
+    console.log(greetings[1]);
+  } else if (currentHour >= 11) {
+    console.log(greetings[2]);
+  } else if (currentHour >= 17) {
+    console.log(greetings[3]);
   };
 }
 
-function helloMore() {
-  let now = new Date();
-  let currentHour = now.getHours();
-  (currentHour >= 23 && currentHour < 5) ? console.log("Доброї ночі") :
-    (currentHour >= 5 && currentHour < 11) ? console.log("Доброго ранку") :
-      (currentHour >= 11 && currentHour < 17) ? console.log("Доброго дня") :
-        console.log("Доброго вечора");
+function greetingOnceMore() {
+  const now = new Date();
+  const currentHour = now.getHours();
+  const greetings = ["Доброї ночі", "Доброго ранку", "Доброго дня", "Доброго вечора"]
+    (currentHour >= 23 && currentHour < 5) ? console.log(greetings[0]) :
+    (currentHour >= 5) ? console.log(greetings[1]) :
+      (currentHour >= 11 && currentHour < 17) ? console.log(greetings[2]) :
+        console.log(greetings[3]);
 }
 
