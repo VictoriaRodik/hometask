@@ -86,9 +86,20 @@ function greetingOnceMore() {
   const now = new Date();
   const currentHour = now.getHours();
   const greetings = ["Доброї ночі", "Доброго ранку", "Доброго дня", "Доброго вечора"]
-    (currentHour >= 23 && currentHour < 5) ? console.log(greetings[0]) :
-    (currentHour >= 5) ? console.log(greetings[1]) :
-      (currentHour >= 11 && currentHour < 17) ? console.log(greetings[2]) :
-        console.log(greetings[3]);
+  switch (true) {
+    case currentHour >= 23 && currentHour < 5:
+      console.log(greetings[0]);
+      break;
+    case currentHour >= 5 && currentHour < 11:
+      console.log(greetings[1]);
+      break;
+    case currentHour >= 11 && currentHour < 17:
+      console.log(greetings[2]);
+      break;
+    case currentHour >= 17:
+      console.log(greetings[3]);
+      break;
+  }
 }
+
 
