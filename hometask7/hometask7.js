@@ -4,73 +4,19 @@
 //         2) із затримкою 2 сек змініть розміри вікна на 500х500 пікселів
 //         3) із затримкою 2 сек перемістіть вікно в точку з координатами (200, 200)
 //         4) із затримкою 2 сек закрийте вікно.
-// let newWindow = window.open("https://www.google.com", "Google", "width=800, height=400, top=200, left=150");
-// newWindow.close();
-// newWindow.moveTo(400,400)
-// newWindow.resizeTo()
-
-
-// function clickHandler(){
-//     console.log("it works from js");
-// }
-
-// const title = document.querySelector('.title');
-
-
-// title.onclick = function(){
-//     console.log("it works again");
-// }
-
-// title.addEventListener("click",function(){
-//     console.log("added event listener");
-// })
-
-// function clickHandler(){
-//     console.log("it works from js");
-// }
-
-// title.addEventListener("click", clickHandler());
-
-// title.addEventListener("click",function(event){
-//     // console.log(event.target);
-//     event.target.style.color = "green";
-// })
-
-// const btn = document.querySelector('.btn');
-// const inp = document.querySelector('.inp');
-
-// btn.addEventListener("click",function(){
-//     title.style.backgroundColor = "red";
-// });
-
-// btn.addEventListener("click", function(){
-//     console.log(inp.value);
-//     inp.value = "";
-// })
-
-// const loginForm = document.querySelector('.loginForm');
-// const name = document.querySelector("#name");
-// const password = document.querySelector("#password");
-
-
-// loginForm.addEventListener("submit", function(event){
-//     event.preventDefault();
-//     console.log(`Your login is ${loginForm.elements["login"]} and password is ${loginForm.elements["password"]}`);
-// })
-
-// setTimeout(function(){
-//     console.log("im here after 3 seconds");
-// }, 3000);
-
 
 //Task1
 // let newWindow = window.open("https://www.google.com", "Google", "width=300, height=300");
 // setTimeout(function() {
 // newWindow.resizeTo(width = 300, height = 300);
-// newWindow.moveTo(200, 200);
-// newWindow.close();
 // }, 2000);
-// setTimeout();
+// setTimeout(function() {
+// newWindow.moveTo(200, 200);
+// }, 4000);
+// setTimeout(function() {
+// newWindow.close();
+// }, 6000);
+
 
 
 // напишіть функцію changeCSS(), яка спрацьовуватиме по кліку на кнопку і змінюватиме стиль вмісту тега <p>: колір шрифту – оранжевий, розмір шрифту 20px, шрифт сімейства "Comic Sans MS".
@@ -138,17 +84,17 @@
 let btn = document.createElement("button");
 document.body.append(btn);
 btn.innerText = "Live Button!";
-btn.addEventListener("click", function(){
+btn.addEventListener("click", function () {
   let pressedText = document.createElement("h1");
   document.body.append(pressedText);
   pressedText.innerText = "I was pressed!";
 });
-btn.addEventListener("mouseover", function(){
+btn.addEventListener("mouseover", function () {
   let onText = document.createElement("h2");
   document.body.append(onText);
   onText.innerText = "Mouse on me!";
 });
-btn.addEventListener("mouseout", function(){
+btn.addEventListener("mouseout", function () {
   let notOnText = document.createElement("h3");
   document.body.append(notOnText);
   notOnText.innerText = "Mouse is not on me!";
